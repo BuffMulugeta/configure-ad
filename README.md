@@ -111,7 +111,9 @@ In Virtual Machines select Client-1-> Networking->Network Setting- Click client1
 
 <br />
 
-6) Utilizing Client-1 to join into the Domain we need to go to the system's settings -> rename this PC advanced-> Change
+6) Utilizing Client-1 to join into the Domain.
+
+We go to the system's settings -> rename this PC advanced-> Change.
 
 <br />
 <br />
