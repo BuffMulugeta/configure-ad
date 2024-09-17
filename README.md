@@ -41,6 +41,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
+1) In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and create a new OU named “_ADMINS.”
+
+<br />
+<br />
+
 ![4](https://github.com/user-attachments/assets/dc19edb0-a84f-4b5f-8bcb-46497ef55a13)
 
 <br />
@@ -57,8 +62,35 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
+2) Create a new employee named "Jane Doe" with the username of "jane_admin, and add jane_admin to the "Domain Admins" Security Group.
+
+<br />
+<br />
+
 ![8](https://github.com/user-attachments/assets/f6d47a43-9167-467b-a38c-a5a9d17f02cd)
 
+<br />
+
+3) Log out/close the Remote Desktop connection to DC-1 and log back in as "mydomain.com\janeadmin."
+
+<br />
+<br />
+
+![12](https://github.com/user-attachments/assets/b40b9dfa-57d3-4d9f-91f1-bf673e285cd1)
+
+<br />
+
+![13](https://github.com/user-attachments/assets/7872449a-7000-470b-9744-9cfa3c155372)
+
+<br />
+
+![14](https://github.com/user-attachments/assets/9c04451d-1084-4404-bc19-e6845163a6f3)
+
+<br />
+
+4) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address and restart Client-1.
+ 
+<br />
 <br />
 
 ![9](https://github.com/user-attachments/assets/32d08f60-8578-4be1-a12f-614b2cdba78d)
@@ -73,17 +105,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
-![12](https://github.com/user-attachments/assets/b40b9dfa-57d3-4d9f-91f1-bf673e285cd1)
 
-<br />
-
-![13](https://github.com/user-attachments/assets/7872449a-7000-470b-9744-9cfa3c155372)
-
-<br />
-
-![14](https://github.com/user-attachments/assets/9c04451d-1084-4404-bc19-e6845163a6f3)
-
-<br />
 
 ![15](https://github.com/user-attachments/assets/63b46809-c3cb-43d0-b66b-efe4be527bd3)
 
