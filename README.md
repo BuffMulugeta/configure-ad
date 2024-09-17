@@ -93,6 +93,8 @@ In _ADMINS right right-click user jane doe-> Select properties-> Click tab "Memb
 <br />
 
 5) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address and restart Client-1.
+
+In Virtual Machines select Client-1-> Networking->Network Setting- Click client1635_z1-> Select Custom DNS Server->Input DC-1 IP Address.
  
 <br />
 <br />
