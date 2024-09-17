@@ -36,13 +36,20 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
-1) Utilizing DC-1 in Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and create a new OU named “_ADMINS.”
+1) Utilizing DC-1 in Active Directory Users and Computers (ADUC), We create an Organizational Unit (OU) called “_EMPLOYEES” and create a new OU named “_ADMINS.”
+
+To create an Organization Unite right click your domain-> New-> Organizational Unit
 
 <br />
 <br />
 
 ![4](https://github.com/user-attachments/assets/dc19edb0-a84f-4b5f-8bcb-46497ef55a13)
 
+2) Create a new employee named "Jane Doe" with the username of "jane_admin.
+
+In _ADMINS right-click select new-> user-> enter name/username.
+
+<br />
 <br />
 
 ![5](https://github.com/user-attachments/assets/9cdf256b-5bc8-4562-8101-a13060f28f8d)
@@ -57,7 +64,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
-2) Create a new employee named "Jane Doe" with the username of "jane_admin, and add jane_admin to the "Domain Admins" Security Group.
+ 3) Add jane_admin to the "Domain Admins" Security Group.
+
+In _ADMINS right right-click user jane doe-> Select properties-> Click tab "Member Of"-> Click Add-> Select Domain Admin-> Click OK, Apply, then OK.
 
 <br />
 <br />
@@ -66,7 +75,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
-3) Log out/close the Remote Desktop connection to DC-1 and log back in as "mydomain.com\janeadmin."
+4) Log out/close the Remote Desktop connection to DC-1 and log back in as "mydomain.com\janeadmin."
 
 <br />
 <br />
@@ -83,7 +92,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
-4) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address and restart Client-1.
+5) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address and restart Client-1.
  
 <br />
 <br />
@@ -100,7 +109,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <br />
 
-5) Utilizing Client-1 to join into the Domain we need to go to the system's settings -> rename this PC advanced-> Change
+6) Utilizing Client-1 to join into the Domain we need to go to the system's settings -> rename this PC advanced-> Change
 
 <br />
 <br />
@@ -115,7 +124,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![17](https://github.com/user-attachments/assets/6175b821-dd95-4657-8e61-a94a2b03ba32)
 
-6) We enter the domain name and log in with jane_admin. 
+7) We enter the domain name and log in with jane_admin. 
 
 <br />
 <br />
@@ -137,14 +146,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![21](https://github.com/user-attachments/assets/2d113c8c-7603-4896-b85d-e5c530d3d389)
 
-7) From the settings page we select Remote Desktop->Select users that can remotely access this PC-> Add-> Enter domain users.
+8) From the settings page we select Remote Desktop->Select users that can remotely access this PC-> Add-> Enter domain users.
 
 <br />
 <br />
 
 ![22](https://github.com/user-attachments/assets/f68e0dbe-741d-4daf-9610-be884400fa8c)
 
-8) Utilizing DC-1 from the start menu search Windows Power Shell and run as Administrator. 
+9) Utilizing DC-1 from the start menu search Windows Power Shell and run as Administrator. 
 
 <br />
 <br />
@@ -155,7 +164,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![24](https://github.com/user-attachments/assets/14d6a20b-d252-480e-8862-54a3af4ec88c)
 
-9) We create a new file in Windows Powershell and copy a script to create random users.
+10) We create a new file in Windows Powershell and copy a script to create random users.
     
 <br />
 <br />
@@ -175,7 +184,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![28](https://github.com/user-attachments/assets/e7349391-4b13-4194-a221-13ded11f0bd3)
 
-10) We select a user from Active Directory and test login with Client 1, then open the command line and run commands "whoami" and "hostname."
+11) We select a user from Active Directory and test login with Client 1, then open the command line and run commands "whoami" and "hostname."
 
 <br />  
 <br />
@@ -186,14 +195,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![30](https://github.com/user-attachments/assets/1cc1de5e-a505-486f-9104-f8a96e231f5f)
 
-11) From DC-1 utilizing Active Directory, we can reset the password by right-clicking the user and selecting reset password. We have the option of setting a New Password or we can unlock the user's account if the user remembers their password. 
+12) From DC-1 utilizing Active Directory, we can reset the password by right-clicking the user and selecting reset password. We have the option of setting a New Password or we can unlock the user's account if the user remembers their password. 
 
 <br />
 <br />
 
 ![31](https://github.com/user-attachments/assets/0052d48e-07a8-4b90-aec2-d4b9eb18da8a)
 
-12) We can also unlock the user account by right-clicking the User-> Selecting properties-> Selecting Account Tab-> Select "Unlock account"-> Clicking apply then OK. 
+13) We can also unlock the user account by right-clicking the User-> Selecting properties-> Selecting Account Tab-> Select "Unlock account"-> Clicking apply then OK. 
 
 <br />
 <br />
@@ -204,7 +213,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![32](https://github.com/user-attachments/assets/a94ba34f-b4c8-4217-be5b-92ada67a37b8)
 
-13) We can also disable the account by right-clicking the User account and selecting diable. 
+14) We can also disable the account by right-clicking the User account and selecting Disable. 
 
 <br />
 <br />
@@ -215,8 +224,4 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![34](https://github.com/user-attachments/assets/9d812d16-c696-4a51-a640-41ac11b2a304)
 
-14) Utilizing client-1 We attempt to log in with the disabled account and get an error message stating the User account is diabled. 
-
-
-
-
+15) Utilizing client-1 We attempt to log in with the disabled account and get an error message stating the User account is disabled. 
