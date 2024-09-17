@@ -18,13 +18,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Step 1
-- Step 2
-- Step 3
-- Step 4
-
 <h2>Deployment and Configuration Steps</h2>
 
 **Note: We will be switching between two virtual machines we've created DC-1 which is a Domain Controler VM (Windows Server 2022), and Client-1, which is a Desktop VM (Windows 10) .**
